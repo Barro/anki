@@ -10,9 +10,7 @@ from anki.errors import DeckRenameError
 import aqt
 from anki.sound import clearAudioQueue
 
-
 DECK_SHORTCUTS = "1234567890"
-
 
 class DeckSequenceSelector(object):
     def __init__(self, keys=DECK_SHORTCUTS):
@@ -32,7 +30,7 @@ class DeckSequenceSelector(object):
         key = self.keys[self.current_id]
         self.current_id += 1
         self.nodes[key] = node
-        return shortcut
+        return key
 
 
 class DeckBrowser(object):
